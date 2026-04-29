@@ -1,0 +1,93 @@
+# Binaries and build outputs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace / module cache (usually not committed)
+go.work
+go.work.sum
+/pkg/mod/
+
+# Build and distribution directories
+/bin/
+/dist/
+/build/
+
+# Coverage and profiling files
+*.coverprofile
+coverage.out
+coverage.html
+*.cgo1.go
+*.cgo2.c
+*.cgo.h
+*.syso
+
+# Dependency vendoring (uncomment if using vendoring)
+# vendor/
+
+# IDE - VS Code (keep shared workspace settings, ignore personal ones)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# OS generic
+.DS_Store
+.directory
+*.bak
+*.swp
+*.swo
+*~
+~$*
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# Logs
+*.log
+logs/
+
+# Docker related (ignore generated/temporary files, but not Dockerfile/docker-compose.yml)
+.dockerignore
+docker-compose.override.yml   # if use for local overrides, otherwise keep
+!docker-compose.override.yml  # uncomment if you want to commit a base override file
+.docker/
+docker-compose.*.yml   # e.g., docker-compose.prod.yml – ignore unless tracked
+!.dockerignore         # keep the root .dockerignore file (if you create it)
+
+# Temp files for Docker builds
+/tmp/docker/
+.docker/tmp/
+
+# VS Code debug and test artifacts
+__debug_bin
+__test_bin
+
+# Go test cache (ignored by default, but fine)
+/.cache/
+
+# Project specific (example: any temporary data or uploaded files)
+/tmp/
+/uploads/
+/data/
